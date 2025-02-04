@@ -1,0 +1,60 @@
+.title {
+  color: gold !important;
+}
+
+.card {
+  max-width: 345px !important;
+  background: linear-gradient(to bottom, #212121, #000) !important;
+  box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.3) !important;
+  transition: all 0.3s ease-in-out !important;
+  border-radius: 20px !important;
+  color: #fff !important;
+}
+
+.card:hover {
+  box-shadow: 0px 8px 30px rgba(255, 215, 0, 0.8) !important;
+  transform: scale(1.05) !important;
+}
+
+.card-media {
+  border-top-left-radius: 20px !important;
+  border-top-right-radius: 20px !important;
+}
+
+.genre-chip {
+  background: rgba(255, 215, 0, 0.2) !important;
+  color: #FFD700 !important;
+  font-weight: bold !important;
+}
+
+.trailer-button {
+  border-color: gold !important;
+  color: gold !important;
+}
+
+.trailer-button:hover {
+  background-color: rgba(255, 215, 0, 0.2) !important;
+}
+
+.delete-icon {
+  color: #e53935 !important;
+}
+
+.delete-icon:hover {
+  background-color: rgba(229, 57, 53, 0.1) !important;
+  box-shadow: 0px 0px 10px rgba(229, 57, 53, 0.8) !important;
+}
+
+.empty-message {
+  color: gold !important;
+}
+
+.clear-button {
+  display: block !important;
+  margin: 3rem auto 0 !important;
+  background-color: gold !important;
+}
+
+.clear-button:hover {
+  background-color: #FFD700 !important;
+}
