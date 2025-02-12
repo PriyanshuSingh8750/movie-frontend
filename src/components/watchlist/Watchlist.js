@@ -25,7 +25,7 @@ const Watchlist = () => {
   const fetchMovieDetails = async (imdbIds) => {
     try {
       const moviePromises = imdbIds.map((id) =>
-        fetch(`http://localhost:8080/api/v1/movies/${id}`).then((res) => res.json())
+        fetch(`https://enthusiastic-encouragement-production.up.railway.app/api/v1/movies/${id}`).then((res) => res.json())
       );
       const movies = await Promise.all(moviePromises);
       return movies;
@@ -46,7 +46,7 @@ const Watchlist = () => {
       }
   
       try {
-        const response = await fetch(`http://localhost:8080/api/v1/users/${userId}/watchlist`, {
+        const response = await fetch(`https://enthusiastic-encouragement-production.up.railway.app/api/v1/users/${userId}/watchlist`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -77,7 +77,7 @@ const Watchlist = () => {
       return;
     }
   
-    fetch(`http://localhost:8080/api/v1/users/${userId}/watchlist`, {
+    fetch(`https://enthusiastic-encouragement-production.up.railway.app/api/v1/users/${userId}/watchlist`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -106,7 +106,7 @@ const Watchlist = () => {
         fetchMovieDetails(updatedWatchlist).then((movies) => setWatchlist(movies));
     } else {
         try {
-            const response = await fetch(`http://localhost:8080/api/v1/users/${loggedInUserId}/watchlist/${movieId}`, {
+            const response = await fetch(`https://enthusiastic-encouragement-production.up.railway.app/api/v1/users/${loggedInUserId}/watchlist/${movieId}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: `Bearer ${token}`, // ✅ Now token is included
@@ -118,7 +118,7 @@ const Watchlist = () => {
             }
 
             // ✅ Fetch updated watchlist
-            const updatedResponse = await fetch(`http://localhost:8080/api/v1/users/${loggedInUserId}/watchlist`, {
+            const updatedResponse = await fetch(`https://enthusiastic-encouragement-production.up.railway.app/api/v1/users/${loggedInUserId}/watchlist`, {
                 headers: {
                     Authorization: `Bearer ${token}`, // ✅ Token for authentication
                 },

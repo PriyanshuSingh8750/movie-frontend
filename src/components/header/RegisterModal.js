@@ -12,7 +12,7 @@ const RegisterModal = ({ show, handleClose }) => {
 
   const handleRegister = async () => {
     try {
-      const response = await axios.post("http://localhost:8080/api/v1/auth/register", {
+      const response = await axios.post("https://enthusiastic-encouragement-production.up.railway.app/api/v1/auth/register", {
         userId: registerDetails.userId,
         password: registerDetails.password, // Send plaintext password
         email: registerDetails.email,

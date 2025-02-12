@@ -37,7 +37,7 @@ const Hero = ({ movies }) => {
                     toast.info("⚠️ Movie is already in your watchlist.");
                 }
             } else {
-                const response = await fetch(`http://localhost:8080/api/v1/users/${userId}/watchlist`, {
+                const response = await fetch(`https://enthusiastic-encouragement-production.up.railway.app/api/v1/users/${userId}/watchlist`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
